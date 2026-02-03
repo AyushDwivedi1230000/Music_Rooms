@@ -1,0 +1,81 @@
+.chat {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 320px;
+}
+
+.chat h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.list {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 0.75rem;
+  min-height: 120px;
+}
+
+.message,
+.system {
+  padding: 0.35rem 0;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.message .name {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+.message .body {
+  color: var(--text-primary);
+}
+
+.system {
+  text-align: center;
+}
+
+.systemText {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.send {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+.send:hover {
+  background: var(--accent-hover);
+}

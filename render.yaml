@@ -1,0 +1,23 @@
+# Render.com blueprint - backend service
+# Create a Web Service and set:
+# - Build Command: cd server && npm install
+# - Start Command: cd server && npm start
+# - Add env vars: MONGODB_URI, JWT_SECRET, CORS_ORIGIN (your Vercel frontend URL)
+
+services:
+  - type: web
+    name: music-room-api
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
+      - key: ADMIN_ENABLED
+        value: "true"
